@@ -1,0 +1,355 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: #826ce3;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.left-section {
+    flex: 1;
+    color: white;
+    padding: 2rem 0;
+}
+
+.right-section {
+    flex: 1;
+}
+
+/* Typography */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Form elements */
+.email-input {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.sign-up-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #FF8B00;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-up-btn:hover {
+    background-color: #E67A00;
+}
+
+/* Divider */
+.divider {
+    text-align: center;
+    color: white;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* Authentication buttons */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.auth-btn {
+    flex: 1;
+    padding: 0.8rem;
+    background: white;
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Trusted by section */
+.trusted-by {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.trusted-by img {
+    height: 30px;
+    opacity: 0.8;
+    filter: brightness(0) invert(1);
+}
+
+/* Login link */
+.login-link {
+    text-align: center;
+    color: white;
+}
+
+.login-link a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Preview image */
+.preview-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .auth-buttons {
+        flex-direction: column;
+    }
+    
+    .trusted-by {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
+/* Adjust the auth buttons and icon sizing */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.auth-btn {
+    flex: 1;
+    padding: 0.8rem;
+    background: white;
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Add specific styling for the Google icon */
+.auth-btn img {
+    width: 18px;  /* Set a fixed width */
+    height: 18px; /* Set a fixed height */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+/* Unified styling for auth buttons */
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.auth-btn {
+    flex: 1;
+    padding: 0.8rem;
+    background: white;
+    border: none;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Specific styling for icons */
+.auth-btn img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* If you need to target Microsoft logo specifically */
+.auth-btn:nth-child(2) img {
+    width: 18px;
+    height: 18px;
+}
+/* Specific styling for Microsoft auth button */
+.auth-btn:nth-child(2) {
+    padding: 1.2rem;
+    height: 50px;
+    width: 100%;
+    background: white;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    gap: 1rem;
+    padding-left: 2rem; /* Add more padding on the left */
+}
+
+/* Adjust Microsoft logo size */
+.auth-btn:nth-child(2) img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+/* Container for the image and text */
+.feature-container {
+    display: flex;
+    align-items: center; /* Align the image and text vertically */
+    justify-content: center;
+    gap: 30px; /* Increase space between the image and text */
+    flex-wrap: wrap; /* Allow the content to wrap on smaller screens */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+/* Image styling */
+.image-container {
+    width: 100%; /* Make image container full width on smaller screens */
+    max-width: 1000px; /* Limit the maximum width */
+    height: auto;  /* Allow the container to adjust height automatically */
+}
+
+.image-container img {
+    width: 100%; /* Make sure the image takes up the full container width */
+    height: auto; /* Keep the image's aspect ratio intact */
+}
+
+/* Text styling */
+.text-container {
+    max-width: 700px; /* Limit the width of the text */
+    flex: 1; /* Allow text container to take available space */
+    padding: 10px; /* Add padding to the text container */
+}
+
+/* Optional: Styling the heading and paragraph */
+.text-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.text-container p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Media query for screens smaller than 768px (tablet and mobile) */
+@media (max-width: 768px) {
+    .feature-container {
+        flex-direction: column; /* Stack the image and text vertically */
+        gap: 20px; /* Reduce space between image and text */
+    }
+
+    .image-container {
+        max-width: 90%; /* Reduce image width on smaller screens */
+    }
+
+    .text-container {
+        max-width: 100%; /* Allow text to take the full width */
+        padding: 20px; /* Add more padding for readability */
+    }
+
+    .text-container h1 {
+        font-size: 1.5rem; /* Reduce heading size */
+    }
+
+    .text-container p {
+        font-size: 0.9rem; /* Reduce paragraph size */
+    }
+}
+
+/* Media query for screens smaller than 480px (mobile) */
+@media (max-width: 480px) {
+    .text-container h1 {
+        font-size: 1.2rem; /* Further reduce heading size */
+    }
+
+    .text-container p {
+        font-size: 0.85rem; /* Further reduce paragraph size */
+    }
+}
+.features{
+    background-color: aliceblue;
+    width: 100%;
+}
+.anvesh{
+    margin: -30px;
+    background-color: white;
+}
